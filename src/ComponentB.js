@@ -3,10 +3,12 @@ import ComponentC from "./ComponentC";
 import { UserContext, SalaryContext } from "./App";
 function ComponentB() {
   const name = useContext(UserContext)
-  const salary = useContext(SalaryContext)
+  const sContext = useContext(SalaryContext)
+  
   return (
     <>
-    <p>name : {name} , salary : {salary} $</p>
+      <p>name : {name} , sContext : {sContext.income} $</p>
+      <button onClick={()=>{sContext.setIncome(sContext.income + 5000)}}>Add salary</button>
       <ComponentC />
     </>
   );

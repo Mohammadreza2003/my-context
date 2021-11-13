@@ -1,6 +1,7 @@
 import React from "react";
 import { UserContext, SalaryContext } from "./App";
 function ComponentC() {
+
   return (
     <>
       <UserContext.Consumer>
@@ -9,9 +10,9 @@ function ComponentC() {
             return (
               <SalaryContext.Consumer>
                 {
-                  salary => {
+                salary => {
                     return (
-                      <h3>Name: {user} , Salary: {salary} $</h3>
+                      <h3>Name: {user} , Salary: {salary.income} $</h3>
                     )
                   }
                 }
